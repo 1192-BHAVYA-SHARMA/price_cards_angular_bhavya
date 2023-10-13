@@ -1,0 +1,8 @@
+<section class=" gap-3 pricing py-5">
+  <div class="container">
+    <div class=" row">
+      <app-container  *ngFor="let i of var_value"  [plan_obj]="i"  class="col-lg-4"></app-container>
+  <!-- i-for loop var taking value from array var_value   put it in object created called plan_obj  -->
+    </div>
+  </div>
+</section>

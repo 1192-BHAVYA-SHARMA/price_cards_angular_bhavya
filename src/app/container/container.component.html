@@ -1,0 +1,17 @@
+<div class="card mb-5 mb-lg-0">
+  <div class="card-body">
+    <h5 class="card-title text-muted text-uppercase text-center">{{plan_obj?.plan_n}}</h5>
+    <h6 class="card-price text-center">${{plan_obj?.price}}<span class="period">/month</span></h6>
+    <hr>
+    <ul class="fa-ul d-flex flex-column gap-2">
+      <li *ngFor="let item of plan_obj ?.features">
+        <span [ngClass]="{'fa-li fa fa-xmark':!item.isE, 'fa-li fa fa-check':item.isE}"></span>
+        <span [ngClass]="{'text-muted':!item.isE,'font-weight-bold':item.isE}">
+          {{item.nm}}</span>
+      </li>
+    </ul>
+    <div class="d-grid">
+      <a href="#" class="btn btn-primary text-uppercase">Button</a>
+    </div>
+  </div>
+</div>
